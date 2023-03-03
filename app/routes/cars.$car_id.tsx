@@ -34,7 +34,8 @@ export default function Index() {
     searchParams.get("action")) as typeof CAR_NAV[number];
 
   const isLoading =
-    navigation.state === "submitting" || navigation.state === "loading";
+    navigation.location?.pathname === `/cars/${id}` &&
+    (navigation.state === "submitting" || navigation.state === "loading");
 
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
