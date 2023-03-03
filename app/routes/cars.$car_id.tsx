@@ -37,6 +37,11 @@ export default function Index() {
     navigation.location?.pathname === `/cars/${id}` &&
     (navigation.state === "submitting" || navigation.state === "loading");
 
+  // or
+  // const isLoading =
+  //   navigation.formData?.get("action") &&
+  //   (navigation.state === "submitting" || navigation.state === "loading");
+
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Welcome to Remix</h1>
